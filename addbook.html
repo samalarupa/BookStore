@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            border: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scrollbar-width: none;
+        }
+
+        .con {
+            width: 100vw;
+            height: 100vh;
+            color:rgba(9, 79, 9, 0.81)
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(200, 151, 86, 0.355);
+            background-image: url(bg.png);
+            background-size: cover;
+        }
+
+        .subcon {
+
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 1px solid grey;
+            box-shadow: 0 0 10px;
+
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            width: auto;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.096);
+            width: 320px;
+            margin: auto;
+            text-align: center;
+
+
+        }
+
+        input {
+            width: 100%;
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .set {
+            font-size: medium;
+
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            background-color: rgb(23, 22, 22);
+        }
+
+        ::placeholder {
+
+            font-size: medium;
+            font-weight: 500;
+            color: black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light mx-2" href="#"><i class="fa-solid  mx-2 fs-2 fa-book"
+                    style="color: #f4f5f5;"></i>StoryNest</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light fw-bolder" aria-current="page" href="addbook.html">Shop 📚</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light fw-bolder" aria-current="page" href="history.php">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light fw-bolder" href="table.php">Book Collection</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-light" href="#"></a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link disabled text-light fw-bolder" aria-disabled="true">Contact 📞</a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+    <div class="con d-flex justify-content-center align-items-center">
+       
+        <div class="subcon flex-column">
+            <h3 class="text-success fw-bolder">Record a Masterpiece</h3>
+            <form action="addbook.php" method="get">
+                <input type="text" name="bookname" required id="" placeholder="Enter title of the book">
+                <input type="text" name="bookprice" required id="" placeholder="Price of the book">
+                <input type="text" name="bookcount"  required="" placeholder="Enter Count">
+                <input type="submit" class="set" value="Submit">
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
